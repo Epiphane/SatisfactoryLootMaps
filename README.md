@@ -1,11 +1,17 @@
 # Satisfactory Loot Maps
-This python program generates Satisfactory Loot Maps using CSV data on crash sites and loot around the crash sites
+This python program generates Satisfactory Loot Maps using CSV data that holds crash site and item drop information. The program consists of three files - `main.py`, `data.py`, and `graphics.py`. Main is the main program, data handles reading from the CSV data, and graphics does all of the matplotlib and drawing work.
 
 ## Example Satisfactory Maps
 
-### Unique Items
+### Actual Item Positions
+![](final/actual_item_pos_0_003_2800dpi.png)
 
-### Each Item Stack
+### Each Item Stack With Crash Site Requirements
+![](final/items_reqs_NB.png)
+
+### Unique Items With AWESOME Sink Point Values
+![](final/unique_points_KJ.png)
+
 
 ## How To Download And Run
 ### Cloning Repo
@@ -15,10 +21,11 @@ git clone https://github.com/klforthwind/SatisfactoryLootMaps.git
 
 ### Install Instructions
 ```sh
-cd SatisfactoryLootMaps
-
-sudo pip3 install -r requirements.txt
+pip3 install -r requirements.txt
 ```
+
+### Updating Crash Site Functions
+In `graphics.py`, there is dictionary holding function pointers, all listed with a letter string value. `data/hard_drives.csv` contains a column called `Type`, which holds a letter representing which function you want the program to use per crash site. This allows for you to make a function per crash site if you really wanted to. At the moment, there are functions that draw doggos (Hidden Cove nodes), along with functions for the actual crash sites.
 
 ### Running The Code
 ```sh
