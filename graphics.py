@@ -38,7 +38,7 @@ class Graphics:
         self.ax.imshow(img, extent=const, origin='lower')
 
     def savefig(self, filename='output.png', dpi=1600):
-        plt.savefig(filename, dpi=dpi, bbox_inches='tight')
+        plt.savefig('final/' + filename, dpi=dpi, bbox_inches='tight')
     
     def showfig(self):
         plt.show()
