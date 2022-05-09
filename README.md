@@ -6,11 +6,11 @@ This python program generates Satisfactory Loot Maps using CSV data that holds c
 ### Actual Item Positions
 ![](final/actual_item_pos_0_003_2800dpi.png)
 
-### Each Item Stack With Crash Site Requirements
-![](final/items_reqs_NB.png)
 
 ### Unique Items With AWESOME Sink Point Values
 ![](final/unique_points_KJ.png)
+
+***(More images can be found under the `final` folder)***
 
 
 ## How To Download And Run
