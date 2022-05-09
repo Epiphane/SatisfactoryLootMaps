@@ -31,7 +31,7 @@ In `graphics.py`, there is dictionary holding function pointers, all listed with
 ```sh
 python3 main.py <output_filename>
 # output_filename defaults to 'output.png' if left blank
-# Filename will be saved to folder 'final'
+# Map will be saved to folder 'final'
 ```
 
 ## Code Structure
