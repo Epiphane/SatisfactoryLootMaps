@@ -1,7 +1,7 @@
 # Satisfactory Loot Maps
 This python program generates Satisfactory Loot Maps using CSV data that holds crash site and item drop information. The program consists of three files - `main.py`, `data.py`, and `graphics.py`. Main is the main program, data handles reading from the CSV data, and graphics does all of the matplotlib and drawing work.
 
-Video on Sign210 can be found [here](https://youtu.be/Uh9rmpF6Kw0).
+Video on Satisfactory Loot Maps can be found [here](https://youtu.be/Uh9rmpF6Kw0).
 
 ## Example Satisfactory Maps
 
