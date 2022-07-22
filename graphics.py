@@ -31,6 +31,7 @@ class Graphics:
     def create_graph(self):
         """Obtains subplots."""
         self.fig, self.ax = plt.subplots()
+        plt.axis('off')
 
     def plot_background(self, img_path: str, const: [int,int,int,int]):
         """Plots the background on self.ax given extent {const}."""
@@ -38,7 +39,7 @@ class Graphics:
         self.ax.imshow(img, extent=const, origin='lower')
 
     def savefig(self, filename='output.png', dpi=1600):
-        plt.savefig('final/' + filename, dpi=dpi, bbox_inches='tight')
+        plt.savefig('final/' + filename, dpi=dpi, bbox_inches='tight', pad_inches = 0)
     
     def showfig(self):
         plt.show()
