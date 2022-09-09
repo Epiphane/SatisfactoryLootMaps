@@ -1,0 +1,103 @@
+Name,Altitude,Req,X,Y,ID,IMG,Type,X_Off,Y_Off
+BP_DropPod_1145,118,4 Rotor,"-157,080.05","-67,028.16",_1145,HardDrive,M,0,0
+BP_DropPod1,134,30 MW,"87,739.68","-62,975.46",1,HardDrive,M,0,0
+BP_DropPod1,297,4 Motor,"-123,677.37","-167,107.47",1,HardDrive,M,0,0
+BP_DropPod1_0,160,50 MW,"-89,284","-50,630",1_0,HardDrive,M,0,0
+BP_DropPod1_1,11,42 MW / 8 CO,"293,567.47",149.3341675,1_1,HardDrive,M,3000,-3000
+BP_DropPod1_1,83,3 Rotor,"80,980","-44,100",1_1,HardDrive,M,"28,000","40,000"
+BP_DropPod1_2,77,20 MW / 2 CO,"150,633.92","146,698.78",1_2,HardDrive,M,0,0
+BP_DropPod1_2,137,2 HSC,"157,249.75","-40,206.22",1_2,HardDrive,M,0,0
+BP_DropPod1_22,251,112 MW / 11 HSC,"-95,228.08","6,970.72",1_22,HardDrive,M,0,0
+BP_DropPod1_3,63,20 MW,"46,816.75","221,961.13",1_3,HardDrive,M,"25,000.00","25,000.00"
+BP_DropPod1_4,20,50 MW,"301,499.41","-255,639.02",1_4,HardDrive,M,0,0
+BP_DropPod1_8,-98,19 MW / 3 Motor,"176,423.36","243,273.59",1_8,HardDrive,M,0,"25,000.00"
+BP_DropPod1_9,170,420 MW,"-118,480.78","74,929.76",1_9,HardDrive,M,"-24,000.00","60,000.00"
+BP_DropPod10,-16,5 SC,"232,138","27,191",10,HardDrive,M,0,0
+BP_DropPod10,100,30 Motor,"236,508","-312,236.41",10,HardDrive,M,0,0
+BP_DropPod11_2,197,3 HS,"-238,333.98","17,321.70",11_2,HardDrive,M,0,0
+BP_DropPod12,136,10 Black Powder,"-4,706.82","-76,301.98",12,HardDrive,M,0,0
+BP_DropPod13,143,25 MW,"55,247.99","-51,316.34",13,HardDrive,M,0,0
+BP_DropPod14_389,75,5 MF,"-43,144","145,820",14_389,HardDrive,M,"-9,000","11,000"
+BP_DropPod15_821,-18,,"-189,258.11","116,331",15_821,HardDrive,M,0,0
+BP_DropPod16_4595,-10,12 Screw,"30,383.76","266,975.66",16_4595,HardDrive,M,0,0
+BP_DropPod17_7892,32,1 Quickwire,"-108,812.88","214,051.13",17_7892,HardDrive,M,0,0
+BP_DropPod18,-15,,"-259,577.13","105,048.83",18,HardDrive,M,0,0
+BP_DropPod19,132,7 SP,"8,680","-41,777.97",19,HardDrive,M,0,0
+BP_DropPod2,78,1 MF,"-26,327.45","-129,047.50",2,HardDrive,M,0,0
+BP_DropPod2,24,9 MF,"-146,044.06","-137,047.47",2,HardDrive,M,"-2,000.00","2,000.00"
+BP_DropPod2_0,29,4 Blackpowder,"47,834.36","195,703.11",2_0,HardDrive,M,0,0
+BP_DropPod2_1,39,20 MW / 27 EIB,"207,683.09","-68,352.88",2_1,HardDrive,M,0,0
+BP_DropPod2_1,175,4 EIB,"-29,220","-22,643",2_1,HardDrive,M,"-4,000","-4,000"
+BP_DropPod2_10,203,6 RCU,"-78,236.41","90,857.05",2_10,HardDrive,M,0,0
+BP_DropPod2_11,-32,42 MW,"187,056.44","223,656.73",2_11,HardDrive,M,"25,000.00",0
+BP_DropPod2_1325,-1,30 MW,"-195,756.02","-59,210.41",2_1325,HardDrive,M,0,0
+BP_DropPod2_2,-13,67 MW / 2 Turbo Motor,"232,255.38","79,925.55",2_2,HardDrive,M,"-12,000.00","-12,000.00"
+BP_DropPod2_2,171,20 MW / 1 Stator,"111,479","-54,515",2_2,HardDrive,M,"12,000","-14,000"
+BP_DropPod2_23,267,267 MW / 9 AIL,"12,249.80","114,177.23",2_23,HardDrive,M,0,"-10,000.00"
+BP_DropPod2_5,131,40 MW,"46,048.18","141,933.08",2_5,HardDrive,M,0,"-20,000.00"
+BP_DropPod2_6,119,35 Motor,"360,114.72","-106,614.13",2_6,HardDrive,M,0,0
+BP_DropPod20,133,50 MW / 3 EIB,"66,652.42","-13,642.08",20,HardDrive,M,0,0
+BP_DropPod21_2,35,,"294,761.53","-172,374.69",21_2,HardDrive,M,0,0
+BP_DropPod22,-73,,"366,637.47","-303,548.81",22,HardDrive,M,0,0
+BP_DropPod23,39,70 MW,"360,285","-217,558.58",23,HardDrive,M,0,0
+BP_DropPod24_1,234,30 Motor,"174,948.34","-276,436.41",24_1,HardDrive,M,0,0
+BP_DropPod25,232,30 Motor,"159,088.34","-145,116.41",25,HardDrive,M,0,0
+BP_DropPod26,234,30 Motor,"-51,781.66","-209,116.41",26,HardDrive,M,0,0
+BP_DropPod27_20823,215,3 AI Limiter,"163,999","61,333",27_20823,HardDrive,M,0,0
+BP_DropPod28_23787,90,15 MW / 2 CO,"232,515.75","-20,519.29",28_23787,HardDrive,M,0,0
+BP_DropPod29_27444,94,1 Motor,"94,267","47,237",29_27444,HardDrive,M,0,0
+BP_DropPod3,-15,30 MW,"-174,494.89","-197,134.84",3,HardDrive,M,0,0
+BP_DropPod3_1,136,1 Rotor,"17,807.70","-136,922.80",3_1,HardDrive,M,0,0
+BP_DropPod3_11,263,138 MW / 2 SO,"-40,194.12","62,956.59",3_11,HardDrive,M,"-4,000.00",0
+BP_DropPod3_12,96,12 Quickwire,"188,233.39","177,201.39",3_12,HardDrive,M,"3,000.00","-3,000.00"
+BP_DropPod3_2,277,2 Quartz Crystal,"-56,144.28","-72,864.05",3_2,HardDrive,M,0,0
+BP_DropPod3_24,221,1 QC,"-3,511.89","62,314.77",3_24,HardDrive,M,"4,000.00",0
+BP_DropPod3_3,-16,5 SO,"291,821.78","74,782.05",3_3,HardDrive,M,0,0
+BP_DropPod3_3,82,50 MW,"125,497.35","-34,949.38",3_3,HardDrive,M,0,0
+BP_DropPod3_4,100,1 HMF,"84,547","98,507.96",3_4,HardDrive,M,0,"-6,000.00"
+BP_DropPod3_5,175,9 Quickwire,"28,695.54","193,441.09",3_5,HardDrive,M,"-12,000.00",0
+BP_DropPod3_7,60,,"275,070","-52,585",3_7,HardDrive,M,0,0
+BP_DropPod3_8,21,10 MW / 1 Rotor,"-56,987.56","-144,603.63",3_8,HardDrive,M,"-4,000.00","-4,000.00"
+BP_DropPod3_8348,-4,21 Rotor,"-232,498","-51,432",3_8348,HardDrive,M,"-2,000",500
+BP_DropPod30_6998,161,50 MW,"169,774.67","-11,217.96",30_6998,HardDrive,M,0,0
+BP_DropPod31,63,30 Motor,"200,510.45","131,912.36",31,HardDrive,M,0,0
+BP_DropPod32,11,5 MF,"-78,884","292,640",32,HardDrive,M,0,0
+BP_DropPod33,91,20 MW / 2 CO,"90,313.92","129,583.78",33,HardDrive,M,0,0
+BP_DropPod34,11,5 MF,"-152,279.00","229,520.00",34,HardDrive,M,0,0
+BP_DropPod4,120,10 MW / 15 Screw,"111,212.86","-113,040.63",4,HardDrive,M,"-4,300.00","4,300.00"
+BP_DropPod4,45,4 Rotor,"-247,303.56","-142,348.27",4,HardDrive,M,0,0
+BP_DropPod4_1,250,20 MW / 2 CO,"143,671.61","92,573.48",4_1,HardDrive,M,"-2,000.00","2,000.00"
+BP_DropPod4_12,251,8 Turbo Motor,"-157,077.94","-6,312.62",4_12,HardDrive,M,0,0
+BP_DropPod4_13058,122,10 Solid Biofuel,"-200,203.45","-17,766.80",4_13058,HardDrive,M,0,0
+BP_DropPod4_25,235,5 CO,"-33,340.23","5,176.29",4_25,HardDrive,M,"-4,000.00","4,000.00"
+BP_DropPod4_4,57,4 Computer,"191,366.20","37,694.17",4_4,HardDrive,M,0,0
+BP_DropPod4_6,14,30 MW,"88,323.70","188,913.63",4_6,HardDrive,M,0,0
+BP_DropPod4_7,81,40 MW,"97,548.66","-146,596.44",4_7,HardDrive,M,"-3,000.00","-3,000.00"
+BP_DropPod4_8033,173,48 MW / 20 CB,"144,456.53","36,294.05",4_8033,HardDrive,M,"-4,000.00","-4,000.00"
+BP_DropPod4_9,-71,6 EIB,"118,349.95","221,905.25",4_9,HardDrive,M,0,0
+BP_DropPod40_1163,25,20 MW / 2 Motor,"21,373.38","132,336.28",40_1163,HardDrive,M,"-8,000.00","8,000.00"
+BP_DropPod41_8375,-10,40 MW,"-9,988.38","227,625.50",41_8375,HardDrive,M,0,0
+BP_DropPod5,73,200 MW,"226,418.22","98,109.51",5,HardDrive,M,0,"4,000.00"
+BP_DropPod5,141,6 MF,"64,696.56","156,038.69",5,HardDrive,M,0,0
+BP_DropPod5_10,-93,4 Rubber,"156,569.67","191,767.78",5_10,HardDrive,M,"-3,000.00","3,000.00"
+BP_DropPod5_13,193,256 MW,"-152,676.61","33,864.59",5_13,HardDrive,M,0,0
+BP_DropPod5_26,228,7 SC,"35,082.13","16,211.34",5_26,HardDrive,M,0,0
+BP_DropPod5_6,-14,10 Rubber,"127,215.88","-116,866.95",5_6,HardDrive,M,"19,000.00","16,500.00"
+BP_DropPod5_740,99,3 EIB,"-151,842","72,468",5_740,HardDrive,M,0,0
+BP_DropPod5_9,-15,10 Motor,"349,295.31","-38,832.00",5_9,HardDrive,M,0,0
+BP_DropPod6,-16,2 SC,"272,715.13","28,087.71",6,HardDrive,M,0,0
+BP_DropPod6,198,138 MW / 2 HS,"-94,708.85","40,337.61",6,HardDrive,M,0,0
+BP_DropPod6_2102,102,1 CO,"-108,774","107,811",6_2102,HardDrive,M,"-3,000","3,000"
+BP_DropPod6_27,218,6 Turbo Motor,"-35,359.99","116,594.39",6_27,HardDrive,M,"1,000.00","-3,000.00"
+BP_DropPod7,-16,7 HS,"216,096.72",-268.4361877,7,HardDrive,M,-6000,0
+BP_DropPod7,327,,"-142,000","23,970",7,HardDrive,M,0,0
+BP_DropPod7_5615,0,20 MW / 4 SB,"-121,994","166,916",7_5615,HardDrive,M,0,0
+BP_DropPod8,-26,73 MW / 3 AI Limiter,"261,797.50","124,616.83",8,HardDrive,M,0,0
+BP_DropPod8,65,10 Rotor,"219,146.14","-199,880.16",8,HardDrive,M,0,0
+BP_DropPod9,24,1 Quantum Computer,"249,919.50","59,534.23",9,HardDrive,M,"3,000.00",0
+BP_DropPod9_1568,48,53 MW,"-129,115","60,165",9_1568,HardDrive,M,"3,000","-3,000"
+HC_1,,,"-161,124.00","65,965.00",HC_1,LizardDoggo,O,"-130,000.00","-350,000.00"
+HC_2,,,"-189,000.00","71,500.00",HC_2,LizardDoggo,O,"-60,000.00","-355,000.00"
+HC_3,,,"-191,255.00","74,571.00",HC_3,LizardDoggo,O,"-20,000.00","-357,000.00"
+HC_4.25,,,"-183,000.00","68,710.00",HC_4,LizardDoggo,O,"10,000.00","-350,000.00"
+HC_5,,,"-168,632.00","61,618.00",HC_5,LizardDoggo,O,"40,000.00","-343,000.00"

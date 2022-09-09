@@ -40,7 +40,7 @@ python3 main.py <output_filename>
 ### SatisfactoryLootMaps
 ```
 .
-├── data                    # CSV files containing crash site data
+├── data                    # CSV files containing game data
 ├── final                   # Final images of generated loot maps
 ├── img                     # Image files for README.md
 ├── imgs                    # Image files for SatisfactoryLootMaps program
