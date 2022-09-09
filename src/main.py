@@ -1,5 +1,7 @@
+from data.creature_spawners import *
 from data.crash_sites import *
 from data.deposits import *
+from data.berries import *
 from data.spawns import *
 from graphics import *
 import sys
@@ -18,7 +20,9 @@ def run(output_name):
 
     sites = CrashSites()
     spawns = SpawnLocations()
+    spawners = CreatureSpawners()
     deposits = Deposits()
+    berries = Berries()
 
     g.create_graph()
     g.plot_background("../imgs/Biome_Map.png", MAP_CONST)
@@ -31,6 +35,12 @@ def run(output_name):
 
     # for d in deposits.depo_lst:
     #     g.place_deposit(d.coords, d.value, DEF_ZOOM, DIST_VAL, DIST_SCALE)
+
+    for b in berries.berry_lst:
+        g.place_berry(b, DEF_ZOOM, DIST_VAL, DIST_SCALE)
+    
+    for s in spawners.spawner_lst:
+        g.place_spawner(s, DEF_ZOOM, DIST_VAL, DIST_SCALE)
 
     g.adjust_graph(MAP_CONST)
 

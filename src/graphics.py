@@ -68,10 +68,10 @@ class Graphics:
         circle = plt.Circle((x, y), radius, linewidth=0.2, color='black', fill=False)
         self.ax.add_artist(circle)
     
-    def draw_txt(self, x, y, txt, rot=-20):
+    def draw_txt(self, x, y, txt, rot=-20, size=0.28):
         """Draws text {txt} centered at (x, y) with given rotation."""
         props = {'ha': 'center', 'va': 'center'}
-        txt = plt.text(x,y, txt, props, size=0.28, color='black', rotation=rot, zorder=10)
+        txt = plt.text(x,y, txt, props, size=size, color='black', rotation=rot, zorder=10)
         txt.set_path_effects([PathEffects.withStroke(linewidth=0.2, foreground='w')])
 
 #########################################
@@ -89,11 +89,54 @@ class Graphics:
     def place_spawn(self, coords, zoom, dist, scale):
         self.draw_img('../imgs/BG.png', zoom / 4.3, coords.x, coords.y)
         self.draw_img('../imgs/loc.png', zoom / 3, coords.x, coords.y)
-    
+
     def place_deposit(self, coords, value, zoom, dist, scale):
         zoom_val = zoom / 3 if int(value) == 21 else zoom * .9
         poi_path = '../imgs/' + str(int(value)) + '.png'
         self.draw_img(poi_path, zoom_val, coords.x, coords.y)
+
+    def place_berry(self, coords, zoom, dist, scale):
+        self.draw_img('../imgs/berry.png', zoom / 4.3, coords.x, coords.y)
+
+    def place_spawner(self, spawner, zoom, dist, scale):
+        drawable = [
+            'Char_SpaceRabbit_C'
+        ]
+
+        if spawner.species not in drawable:
+            return
+        
+        species_dict = {
+            'Char_SpaceGiraffe_C': ('SpaceGiraffe', 0.5),
+            'Char_EliteCaveStinger_C': ('EliteCaveStinger', 1),
+            'Char_CaveStinger_C': ('Stinger', 1),
+            'Char_CaveStinger_Child_C': ('Stinger', 0.6),
+            'Char_Stinger_C': ('Stinger', 1),
+            'Char_Stinger_Child_C': ('Stinger', 0.6),
+            'Char_SpaceRabbit_C': ('LizardDoggo', 0.45),
+            'Char_Hog_C': ('Hog', 0.8),
+            'Char_AlphaHog_C': ('AlphaHog', 1),
+            'Char_Spitter_C': ('Spitter', 1),
+            'Char_Spitter_Alternative_C': ('BlueSpitter', 1),
+            'Char_Spitter_Small_C': ('Spitter', 0.7),
+            'Char_NonFlyingBird_C': ('NonFlyingBird', 0.6),
+            'Char_CrabHatcher_C': ('CrabHatcher', 1),
+        }
+
+        data = species_dict[spawner.species]
+        zoom_val = zoom * data[1]
+        spawner_path = f'../imgs/{data[0]}.png'
+
+        self.draw_circle(spawner.coords.x, spawner.coords.y, spawner.spawn_radius)
+        self.draw_img(spawner_path, zoom_val, spawner.coords.x, spawner.coords.y)
+
+        txt = ''
+        if spawner.max != 1:
+            txt = f'{spawner.min}'
+            if spawner.min != spawner.max:
+                txt += f' - {spawner.max}'
+        
+        self.draw_txt(spawner.coords.x, spawner.coords.y - 50, txt, size=0.4)
 
 ####################################
 #   CUSTOM FUNCTIONS FOR DRAWING   #

@@ -6,7 +6,7 @@ class Deposit:
     """Deposit - Holds deposit information."""
 
     def __init__(self, data) -> None:
-        """Initializes deposit with gata from deposits csv."""
+        """Initializes deposit with data from deposits csv."""
         self.coords = Point3D(data)
         self.value = data['Val']
 
