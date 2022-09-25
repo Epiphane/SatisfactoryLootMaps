@@ -63,9 +63,9 @@ class Graphics:
         ab = AnnotationBbox(self.get_image(path, zoom_val), (x, y), frameon=False)
         self.ax.add_artist(ab)
 
-    def draw_circle(self, x, y, radius):
+    def draw_circle(self, x, y, radius, color='black'):
         """Draws a circle at (x, y) with given radius."""
-        circle = plt.Circle((x, y), radius, linewidth=0.2, color='black', fill=False)
+        circle = plt.Circle((x, y), radius, linewidth=0.2, color=color, fill=False)
         self.ax.add_artist(circle)
     
     def draw_txt(self, x, y, txt, rot=-20, size=0.28):
@@ -94,6 +94,38 @@ class Graphics:
         zoom_val = zoom / 3 if int(value) == 21 else zoom * .9
         poi_path = '../imgs/' + str(int(value)) + '.png'
         self.draw_img(poi_path, zoom_val, coords.x, coords.y)
+
+    def place_static_deposit(self, coords, value, zoom, dist, scale):
+        if int(value) != 21:
+            zoom_val = zoom / 4.5
+            poi_path = '../imgs/chisel.png'
+            self.draw_img(poi_path, zoom_val, coords.x, coords.y)
+
+    def place_res_node(self, node, zoom, dist, scale):
+        colors = {
+            "Inpure": "red",
+            "Normal": "orange",
+            "Pure": "green"
+        }
+        ores = {
+            "Desc_OreCopper_C":2,
+            "Desc_SAM_C":8,
+            "Desc_Stone_C":0,
+            "Desc_LiquidOil_C":10,
+            "Desc_OreIron_C":1,
+            "Desc_Coal_C":3,
+            "Desc_Sulfur_C":5,
+            "Desc_OreGold_C":4,
+            "Desc_RawQuartz_C":6,
+            "Desc_OreBauxite_C":7,
+            "Desc_OreUranium_C":9
+        }
+        coords = node.coords
+        self.draw_circle(coords.x, coords.y, 2000, color=colors[node.purity])
+        self.draw_img(f'../imgs/{ores[node.type]}.png', zoom * .66, coords.x, coords.y)
+
+    def place_rock(self, coords, zoom, dist, scale):
+        self.draw_img('../imgs/rock.png', zoom / 4.9, coords.x, coords.y)
 
     def place_berry(self, coords, zoom, dist, scale):
         self.draw_img('../imgs/berry.png', zoom / 4.3, coords.x, coords.y)

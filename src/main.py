@@ -1,4 +1,6 @@
 from data.creature_spawners import *
+from data.resource_nodes import *
+from data.large_rocks import *
 from data.crash_sites import *
 from data.deposits import *
 from data.berries import *
@@ -23,24 +25,36 @@ def run(output_name):
     spawners = CreatureSpawners()
     deposits = Deposits()
     berries = Berries()
+    nodes = ResourceNodes()
+    rocks = LargeRocks()
+
 
     g.create_graph()
-    g.plot_background("../imgs/Biome_Map.png", MAP_CONST)
+    g.plot_background("../imgs/Biome_MapU6.png", MAP_CONST)
 
     # for poi in sites.poi_lst:
     #     g.place_poi(poi, DEF_ZOOM, DIST_VAL, DIST_SCALE)
 
-    for s in spawns.spawn_lst:
-        g.place_spawn(s, DEF_ZOOM, DIST_VAL, DIST_SCALE)
+    # for s in spawns.spawn_lst:
+    #     g.place_spawn(s, DEF_ZOOM, DIST_VAL, DIST_SCALE)
+
+    for n in nodes.res_node_lst:
+        g.place_res_node(n, DEF_ZOOM, DIST_VAL, DIST_SCALE)
+
+    for r in rocks.rock_lst:
+        g.place_rock(r, DEF_ZOOM, DIST_VAL, DIST_SCALE)
+
+    for d in deposits.depo_lst:
+        g.place_static_deposit(d.coords, d.value, DEF_ZOOM, DIST_VAL, DIST_SCALE)
 
     # for d in deposits.depo_lst:
     #     g.place_deposit(d.coords, d.value, DEF_ZOOM, DIST_VAL, DIST_SCALE)
 
-    for b in berries.berry_lst:
-        g.place_berry(b, DEF_ZOOM, DIST_VAL, DIST_SCALE)
+    # for b in berries.berry_lst:
+    #     g.place_berry(b, DEF_ZOOM, DIST_VAL, DIST_SCALE)
     
-    for s in spawners.spawner_lst:
-        g.place_spawner(s, DEF_ZOOM, DIST_VAL, DIST_SCALE)
+    # for s in spawners.spawner_lst:
+    #     g.place_spawner(s, DEF_ZOOM, DIST_VAL, DIST_SCALE)
 
     g.adjust_graph(MAP_CONST)
 
