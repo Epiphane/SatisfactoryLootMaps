@@ -68,8 +68,8 @@ class CrashSites:
 
     def load_csv(self):
         """Loads csv data to variables."""
-        self.lp = read_csv('../data/loot_points.csv')
-        self.hd = read_csv('../data/crash_sites.csv')
+        self.lp = read_csv('../data/U7/loot_points.csv')
+        self.hd = read_csv('../data/U7/crash_sites.csv')
 
     def populate_poi(self):
         """Creates a variable holding all populated POI (from their respective data)."""

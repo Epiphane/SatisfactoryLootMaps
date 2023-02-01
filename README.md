@@ -5,12 +5,15 @@ Video on Satisfactory Loot Maps can be found [here](https://youtu.be/Uh9rmpF6Kw0
 
 ## Example Satisfactory Maps
 
+### Unique Items With HD Requirements
+![](final/U7/unique_reqs_LB.png)
+
 ### Actual Item Positions
-![](final/actual_item_pos_0_003_2800dpi.png)
+![](final/U5/actual_item_pos_0_003_2800dpi.png)
 
 
 ### Unique Items With AWESOME Sink Point Values
-![](final/unique_points_KJ.png)
+![](final/U5/unique_points_KJ.png)
 
 ***(More images can be found under the `final` folder)***
 

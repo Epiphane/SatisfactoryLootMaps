@@ -30,22 +30,24 @@ def run(output_name):
 
 
     g.create_graph()
-    g.plot_background("../imgs/Biome_MapU6.png", MAP_CONST)
+    g.plot_background("../imgs/Biome_MapU7.png", MAP_CONST)
 
-    # for poi in sites.poi_lst:
-    #     g.place_poi(poi, DEF_ZOOM, DIST_VAL, DIST_SCALE)
+    for poi in sites.poi_lst:
+        g.place_poi(poi, DEF_ZOOM, DIST_VAL, DIST_SCALE)
 
     # for s in spawns.spawn_lst:
     #     g.place_spawn(s, DEF_ZOOM, DIST_VAL, DIST_SCALE)
 
-    for n in nodes.res_node_lst:
-        g.place_res_node(n, DEF_ZOOM, DIST_VAL, DIST_SCALE)
 
-    for r in rocks.rock_lst:
-        g.place_rock(r, DEF_ZOOM, DIST_VAL, DIST_SCALE)
+    # for n in nodes.res_node_lst:
+    #     g.place_res_node(n, DEF_ZOOM, DIST_VAL, DIST_SCALE)
 
-    for d in deposits.depo_lst:
-        g.place_static_deposit(d.coords, d.value, DEF_ZOOM, DIST_VAL, DIST_SCALE)
+    # for r in rocks.rock_lst:
+    #     g.place_rock(r, DEF_ZOOM, DIST_VAL, DIST_SCALE)
+
+    # for d in deposits.depo_lst:
+    #     g.place_static_deposit(d.coords, d.value, DEF_ZOOM, DIST_VAL, DIST_SCALE)
+
 
     # for d in deposits.depo_lst:
     #     g.place_deposit(d.coords, d.value, DEF_ZOOM, DIST_VAL, DIST_SCALE)
@@ -58,7 +60,6 @@ def run(output_name):
 
     g.adjust_graph(MAP_CONST)
 
-    # g.showfig()
     g.savefig(output_name)
 
 if __name__ == '__main__':

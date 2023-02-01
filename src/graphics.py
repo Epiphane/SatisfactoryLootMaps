@@ -33,7 +33,7 @@ class Graphics:
         self.fig, self.ax = plt.subplots()
         plt.axis('off')
 
-    def plot_background(self, img_path: str, const: [int,int,int,int]):
+    def plot_background(self, img_path: str, const: list[int,int,int,int]):
         """Plots the background on self.ax given extent {const}."""
         img = plt.imread(img_path)
         self.ax.imshow(img, extent=const, origin='lower')
@@ -44,7 +44,7 @@ class Graphics:
     def showfig(self):
         plt.show()
 
-    def adjust_graph(self, const: [int,int,int,int]):
+    def adjust_graph(self, const: list[int,int,int,int]):
         """Flips graph and set limits for Axes."""
         self.ax = plt.gca()
         self.ax.set_ylim(self.ax.get_ylim()[::-1])

@@ -22,7 +22,7 @@ class Deposits:
 
     def load_csv(self) -> None:
         """Loads csv data to variables."""
-        self.depo_csv = read_csv('../data/all_deposits.csv')
+        self.depo_csv = read_csv('../data/U5/all_deposits.csv')
 
     def populate_deposits(self) -> None:
         """Creates a variable holding all deposits (from their respective data)."""

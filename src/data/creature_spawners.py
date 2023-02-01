@@ -26,7 +26,7 @@ class CreatureSpawners:
 
     def load_csv(self):
         """Loads csv data to variables."""
-        self.spawner_loc = read_csv('../data/creatures.csv')
+        self.spawner_loc = read_csv('../data/U5/creatures.csv')
 
     def populate_spawner_locations(self):
         """Creates a variable holding all spawner locations (from their respective data)."""

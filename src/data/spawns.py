@@ -14,7 +14,7 @@ class SpawnLocations:
 
     def load_csv(self):
         """Loads csv data to variables."""
-        self.spawn_loc = read_csv('../data/sample_spawns.csv')
+        self.spawn_loc = read_csv('../data/U5/sample_spawns.csv')
 
     def populate_spawn_locations(self):
         """Creates a variable holding all player spawn locations (from their respective data)."""

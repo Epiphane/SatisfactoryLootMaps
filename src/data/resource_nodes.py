@@ -24,7 +24,7 @@ class ResourceNodes:
 
     def load_csv(self):
         """Loads csv data to variables."""
-        self.node_loc = read_csv('../data/resource_nodes.csv')
+        self.node_loc = read_csv('../data/U5/resource_nodes.csv')
 
     def populate_node_locations(self):
         """Creates a variable holding all resource node locations (from their respective data)."""

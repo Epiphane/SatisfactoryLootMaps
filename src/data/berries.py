@@ -14,7 +14,7 @@ class Berries:
 
     def load_csv(self):
         """Loads csv data to variables."""
-        self.berry_loc = read_csv('../data/berries.csv')
+        self.berry_loc = read_csv('../data/U5/berries.csv')
 
     def populate_berry_locations(self):
         """Creates a variable holding all berry locations (from their respective data)."""
