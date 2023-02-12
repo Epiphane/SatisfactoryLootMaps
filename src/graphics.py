@@ -63,9 +63,9 @@ class Graphics:
         ab = AnnotationBbox(self.get_image(path, zoom_val), (x, y), frameon=False)
         self.ax.add_artist(ab)
 
-    def draw_circle(self, x, y, radius, color='black'):
+    def draw_circle(self, x, y, radius, color='black', fill=False):
         """Draws a circle at (x, y) with given radius."""
-        circle = plt.Circle((x, y), radius, linewidth=0.2, color=color, fill=False)
+        circle = plt.Circle((x, y), radius, linewidth=0.2, color=color, fill=fill)
         self.ax.add_artist(circle)
     
     def draw_txt(self, x, y, txt, rot=-20, size=0.28):
@@ -104,7 +104,7 @@ class Graphics:
     def place_res_node(self, node, zoom, dist, scale):
         colors = {
             "Inpure": "red",
-            "Normal": "orange",
+            "Normal": "darkorange",
             "Pure": "green"
         }
         ores = {
@@ -121,7 +121,7 @@ class Graphics:
             "Desc_OreUranium_C":9
         }
         coords = node.coords
-        self.draw_circle(coords.x, coords.y, 2000, color=colors[node.purity])
+        self.draw_circle(coords.x, coords.y, 2000, color=colors[node.purity], fill=True)
         self.draw_img(f'../imgs/{ores[node.type]}.png', zoom * .66, coords.x, coords.y)
 
     def place_rock(self, coords, zoom, dist, scale):
