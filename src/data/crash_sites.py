@@ -84,6 +84,10 @@ class CrashSites:
         """Populates POI with items based on closest POI to item."""
         for i in range(len(self.lp["X"])):
             row = self.lp.iloc[i]
+
+            if not int(row["Accessible"]):
+                continue
+
             lp_x = row["X"]
             lp_y = row["Y"]
             lp_z = row["Z"]
