@@ -6,7 +6,7 @@ Video on Satisfactory Loot Maps can be found [here](https://youtu.be/Uh9rmpF6Kw0
 ## Example Satisfactory Maps
 
 ### Unique Items With HD Requirements
-![](final/U7/unique_reqs_LB.png)
+![](final/U8/unique_reqs_LB.png)
 
 ### Actual Item Positions
 ![](final/U5/actual_item_pos_0_003_2800dpi.png)
