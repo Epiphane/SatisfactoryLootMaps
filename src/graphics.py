@@ -191,6 +191,7 @@ class Graphics:
                 )
 
                 self.draw_img(item_img, zoom, x, y)
+                self.draw_txt(x, y, item_data[1][stack_num])
                 curr_item += 1
 
     def circle_plot_unique(self, poi, zoom, dist, scale, poi_x, poi_y):

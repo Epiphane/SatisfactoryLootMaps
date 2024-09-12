@@ -1,5 +1,6 @@
 from pandas import read_csv
 import math
+from math import floor
 
 ## Item Vals
 sink_vals = {
@@ -31,17 +32,19 @@ class PointOfInterest:
     def __init__(self, hd_data):
         """Initializes POI with given data from hard drive spreadsheet."""
         self.name = hd_data["Name"]
-        self.alt = hd_data["Altitude"]
+        self.alt = hd_data.get("Altitude", floor((hd_data["Z"] + 500) / 1000))
         self.x = make_float(hd_data["X"])
         self.y = make_float(hd_data["Y"])
-        self.req = hd_data["Req"]
+        self.req = hd_data.get("Req", "")
+        if str(self.req) == "nan":
+            self.req = ""
         self.id = hd_data["ID"]
         self.img = hd_data["IMG"]
         self.type = hd_data["Type"]
         self.x_off = make_float(hd_data["X_Off"])
         self.y_off = make_float(hd_data["Y_Off"])
         self.total_items = 0
-        self.items = dict()
+        self.items = {}
         self.item_lst = []
         self.points = 0
 
@@ -56,6 +59,11 @@ class PointOfInterest:
             self.items[item_type][1] += amount
         else:
             self.items[item_type] = [1, amount]
+        # if item_type in self.items:
+        #     self.items[item_type][0] += 1
+        #     self.items[item_type][1] += [amount]
+        # else:
+        #     self.items[item_type] = [1, [amount]]
 
 
 class CrashSites:
@@ -69,8 +77,8 @@ class CrashSites:
 
     def load_csv(self):
         """Loads csv data to variables."""
-        self.lp = read_csv("../data/U8/loot_points.csv")
-        self.hd = read_csv("../data/U8/crash_sites.csv")
+        self.lp = read_csv("../data/1.0/loot_points.csv")
+        self.hd = read_csv("../data/1.0/crash_sites.csv")
 
     def populate_poi(self):
         """Creates a variable holding all populated POI (from their respective data)."""
@@ -85,7 +93,7 @@ class CrashSites:
         for i in range(len(self.lp["X"])):
             row = self.lp.iloc[i]
 
-            if not int(row["Accessible"]):
+            if not int(row.get("Accessible", 1)):
                 continue
 
             lp_x = row["X"]
@@ -97,7 +105,7 @@ class CrashSites:
             # Iterate to find closest drive
             for index, poi in enumerate(self.poi_lst):
                 # print(poi.name, row["Closest POI"])
-                if poi.name == row["Closest POI"]:
+                if poi.name == row.get("Closest POI"):
                     min_dist = 0
                     pod_num = index
                 else:
