@@ -1,14 +1,18 @@
-from data.creature_spawners import *
-from data.resource_nodes import *
-from data.large_rocks import *
-from data.crash_sites import *
-from data.deposits import *
-from data.berries import *
-from data.spawns import *
-from graphics import *
-import sys
+"""Main file for running the program."""
 
-"""Variables for sizing / placing images correctly."""
+import sys
+from data.creature_spawners import CreatureSpawners
+from data.resource_nodes import ResourceNodes
+from data.large_rocks import LargeRocks
+from data.crash_sites import CrashSites
+from data.spawns import SpawnLocations
+from data.deposits import Deposits
+from data.berries import Berries
+from data.mercers import Mercers
+from data.somers import Somers
+from graphics import Graphics
+from data.slugs import Slugs
+
 DEF_ZOOM = 0.010
 DIST_VAL = (1900 / 0.003) * DEF_ZOOM
 DIST_SCALE = (130 / 0.003) * DEF_ZOOM
@@ -24,6 +28,9 @@ def run(output_name):
     sites = CrashSites()
     spawns = SpawnLocations()
     spawners = CreatureSpawners()
+    somers = Somers()
+    mercers = Mercers()
+    slugs = Slugs()
     deposits = Deposits()
     berries = Berries()
     nodes = ResourceNodes()
@@ -32,8 +39,23 @@ def run(output_name):
     g.create_graph()
     g.plot_background("../imgs/Biome_MapU7.png", MAP_CONST)
 
+    # for s in slugs.blue_lst:
+    #     g.place_blue_slug(s, DEF_ZOOM, DIST_VAL, DIST_SCALE)
+
+    # for s in slugs.yellow_lst:
+    #     g.place_yellow_slug(s, DEF_ZOOM, DIST_VAL, DIST_SCALE)
+
+    for s in slugs.purple_lst:
+        g.place_purple_slug(s, DEF_ZOOM, DIST_VAL, DIST_SCALE)
+
     for poi in sites.poi_lst:
         g.place_poi(poi, DEF_ZOOM, DIST_VAL, DIST_SCALE)
+
+    for m in mercers.mercer_lst:
+        g.place_mercer(m, DEF_ZOOM, DIST_VAL, DIST_SCALE)
+
+    for s in somers.somers_lst:
+        g.place_somer(s, DEF_ZOOM, DIST_VAL, DIST_SCALE)
 
     # for s in spawns.spawn_lst:
     #     g.place_spawn(s, DEF_ZOOM, DIST_VAL, DIST_SCALE)

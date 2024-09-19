@@ -124,10 +124,32 @@ class Graphics:
         self.draw_img(f"../imgs/{ores[node.type]}.png", zoom * 0.66, coords.x, coords.y)
 
     def place_rock(self, coords, zoom, dist, scale):
+        """Places Large Rock at given coordinates."""
         self.draw_img("../imgs/rock.png", zoom / 4.9, coords.x, coords.y)
 
     def place_berry(self, coords, zoom, dist, scale):
+        """Places Berry Bush at given coordinates."""
         self.draw_img("../imgs/berry.png", zoom / 4.3, coords.x, coords.y)
+
+    def place_mercer(self, coords, zoom, dist, scale):
+        """Places Mercer Sphere at given coordinates."""
+        self.draw_img("../imgs/Mercer_Sphere.png", zoom / 3.0, coords.x, coords.y)
+
+    def place_somer(self, coords, zoom, dist, scale):
+        """Place Somersloop at given coordinates."""
+        self.draw_img("../imgs/Somersloop.png", zoom / 2.5, coords.x, coords.y)
+
+    def place_blue_slug(self, coords, zoom, dist, scale):
+        """Places Blue Slug at given coordinates."""
+        self.draw_img("../imgs/Blue.png", zoom * 3.0, coords.x, coords.y)
+
+    def place_yellow_slug(self, coords, zoom, dist, scale):
+        """Places Yellow Slug at given coordinates."""
+        self.draw_img("../imgs/Yellow.png", zoom * 3.0, coords.x, coords.y)
+
+    def place_purple_slug(self, coords, zoom, dist, scale):
+        """Places Purple Slug at given coordinates."""
+        self.draw_img("../imgs/Purple.png", zoom * 3.0, coords.x, coords.y)
 
     def place_spawner(self, spawner, zoom, dist, scale):
         drawable = ["Char_SpaceRabbit_C"]
