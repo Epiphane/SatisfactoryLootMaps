@@ -15,7 +15,7 @@ class Somers:
 
     def load_csv(self):
         """Loads csv data to variables."""
-        self.somers_loc = read_csv("../data/1.0/somersloops.csv")
+        self.somers_loc = read_csv("data/1.0/somersloops.csv")
 
     def populate_somers_locations(self):
         """Creates a variable holding all somers locations (from their respective data)."""

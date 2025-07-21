@@ -40,7 +40,7 @@ class Graphics:
         self.ax.imshow(img, extent=const, origin="lower")
 
     def savefig(self, filename="output.png", dpi=1600):
-        plt.savefig("../final/" + filename, dpi=dpi, bbox_inches="tight", pad_inches=0)
+        plt.savefig("final/" + filename, dpi=dpi, bbox_inches="tight", pad_inches=0)
 
     def showfig(self):
         plt.show()
@@ -64,7 +64,7 @@ class Graphics:
         ab = AnnotationBbox(self.get_image(path, zoom_val), (x, y), frameon=False)
         self.ax.add_artist(ab)
 
-    def draw_circle(self, x, y, radius, color="black", fill=False):
+    def draw_circle(self, x, y, radius, color="#222222", fill=False):
         """Draws a circle at (x, y) with given radius."""
         circle = plt.Circle((x, y), radius, linewidth=0.2, color=color, fill=fill)
         self.ax.add_artist(circle)
@@ -83,25 +83,25 @@ class Graphics:
 
     def place_poi(self, poi, zoom, dist, scale):
         zoom_val = zoom if poi.img == "HardDrive" else zoom / 2
-        poi_path = "../imgs/" + poi.img + ".png"
+        poi_path = "imgs/" + poi.img + ".png"
 
         self.draw_img(poi_path, zoom_val, poi.x, poi.y)
 
         self.item_draw[poi.type](poi, zoom, dist, scale)
 
     def place_spawn(self, coords, zoom, dist, scale):
-        self.draw_img("../imgs/BG.png", zoom / 4.3, coords.x, coords.y)
-        self.draw_img("../imgs/loc.png", zoom / 3, coords.x, coords.y)
+        self.draw_img("imgs/BG.png", zoom / 4.3, coords.x, coords.y)
+        self.draw_img("imgs/loc.png", zoom / 3, coords.x, coords.y)
 
     def place_deposit(self, coords, value, zoom, dist, scale):
         zoom_val = zoom / 3 if int(value) == 21 else zoom * 0.9
-        poi_path = "../imgs/" + str(int(value)) + ".png"
+        poi_path = "imgs/" + str(int(value)) + ".png"
         self.draw_img(poi_path, zoom_val, coords.x, coords.y)
 
     def place_static_deposit(self, coords, value, zoom, dist, scale):
         if int(value) != 21:
             zoom_val = zoom / 4.5
-            poi_path = "../imgs/chisel.png"
+            poi_path = "imgs/chisel.png"
             self.draw_img(poi_path, zoom_val, coords.x, coords.y)
 
     def place_res_node(self, node, zoom, dist, scale):
@@ -121,35 +121,35 @@ class Graphics:
         }
         coords = node.coords
         self.draw_circle(coords.x, coords.y, 2000, color=colors[node.purity], fill=True)
-        self.draw_img(f"../imgs/{ores[node.type]}.png", zoom * 0.66, coords.x, coords.y)
+        self.draw_img(f"imgs/{ores[node.type]}.png", zoom * 0.66, coords.x, coords.y)
 
     def place_rock(self, coords, zoom, dist, scale):
         """Places Large Rock at given coordinates."""
-        self.draw_img("../imgs/rock.png", zoom / 4.9, coords.x, coords.y)
+        self.draw_img("imgs/rock.png", zoom / 4.9, coords.x, coords.y)
 
     def place_berry(self, coords, zoom, dist, scale):
         """Places Berry Bush at given coordinates."""
-        self.draw_img("../imgs/berry.png", zoom / 4.3, coords.x, coords.y)
+        self.draw_img("imgs/berry.png", zoom / 4.3, coords.x, coords.y)
 
     def place_mercer(self, coords, zoom, dist, scale):
         """Places Mercer Sphere at given coordinates."""
-        self.draw_img("../imgs/Mercer_Sphere.png", zoom / 3.0, coords.x, coords.y)
+        self.draw_img("imgs/Mercer_Sphere.png", zoom / 3.0, coords.x, coords.y)
 
     def place_somer(self, coords, zoom, dist, scale):
         """Place Somersloop at given coordinates."""
-        self.draw_img("../imgs/Somersloop.png", zoom / 2.5, coords.x, coords.y)
+        self.draw_img("imgs/Somersloop.png", zoom / 2.5, coords.x, coords.y)
 
     def place_blue_slug(self, coords, zoom, dist, scale):
         """Places Blue Slug at given coordinates."""
-        self.draw_img("../imgs/Blue.png", zoom * 3.0, coords.x, coords.y)
+        self.draw_img("imgs/Blue.png", zoom * 3.0, coords.x, coords.y)
 
     def place_yellow_slug(self, coords, zoom, dist, scale):
         """Places Yellow Slug at given coordinates."""
-        self.draw_img("../imgs/Yellow.png", zoom * 3.0, coords.x, coords.y)
+        self.draw_img("imgs/Yellow.png", zoom * 3.0, coords.x, coords.y)
 
     def place_purple_slug(self, coords, zoom, dist, scale):
         """Places Purple Slug at given coordinates."""
-        self.draw_img("../imgs/Purple.png", zoom * 3.0, coords.x, coords.y)
+        self.draw_img("imgs/Purple.png", zoom * 3.0, coords.x, coords.y)
 
     def place_spawner(self, spawner, zoom, dist, scale):
         drawable = ["Char_SpaceRabbit_C"]
@@ -176,7 +176,7 @@ class Graphics:
 
         data = species_dict[spawner.species]
         zoom_val = zoom * data[1]
-        spawner_path = f"../imgs/{data[0]}.png"
+        spawner_path = f"imgs/{data[0]}.png"
 
         self.draw_circle(spawner.coords.x, spawner.coords.y, spawner.spawn_radius)
         self.draw_img(spawner_path, zoom_val, spawner.coords.x, spawner.coords.y)
@@ -202,7 +202,7 @@ class Graphics:
 
         for item_type in poi.items:
             item_data = poi.items[item_type]
-            item_img = "../imgs/" + item_type + ".png"
+            item_img = "imgs/" + item_type + ".png"
 
             for stack_num in range(item_data[0]):
                 x = poi_x + (dist + scale * item_ct) * math.cos(
@@ -221,14 +221,24 @@ class Graphics:
         Draws a circle and one of each type of item corresponding to crash site (in a circle).
         Writes total number of each item type.
         """
-        self.draw_circle(poi_x, poi_y, zoom * 1300000)
+        items = []
+        for item_type in poi.items:
+            # if item_type not in ["Plastic", "Rubber"]:#, "IronRod", "IronPlate", "Cable", "Rotor", "IronPlateReinforced"]:
+            #     continue
 
-        item_ct = len(poi.items)
+            items.append(item_type)
+
+        item_ct = len(items)
         curr_item = 0
 
-        for item_type in poi.items:
+        if item_ct == 0:
+            return
+            
+        self.draw_circle(poi_x, poi_y, zoom * 1300000)
+
+        for item_type in items:
             item_data = poi.items[item_type]
-            item_img = "../imgs/" + item_type + ".png"
+            item_img = "imgs/" + item_type + ".png"
 
             x = poi_x + (dist + scale * item_ct) * math.cos(
                 (math.pi * curr_item) / (float(item_ct) / 2.0)
@@ -243,7 +253,7 @@ class Graphics:
 
     def doggo_draw(self, poi, zoom, dist, scale):
         self.draw_img(
-            "../imgs/" + poi.img + ".png",
+            "imgs/" + poi.img + ".png",
             zoom / 2,
             poi.x + poi.x_off,
             poi.y + poi.y_off,
@@ -253,7 +263,7 @@ class Graphics:
     def a_actual_loc(self, poi, zoom, dist, scale):
         """Draws all items at actual coordinates."""
         for item in poi.item_lst:
-            item_img = "../imgs/" + item[0] + ".png"
+            item_img = "imgs/" + item[0] + ".png"
 
             self.draw_img(item_img, zoom, item[2], item[3])
 

@@ -17,7 +17,7 @@ class Slugs:
 
     def load_csv(self):
         """Loads csv data to variables."""
-        self.slugs_loc = read_csv("../data/1.0/slugs.csv")
+        self.slugs_loc = read_csv("data/1.0/slugs.csv")
 
     def populate_slug_locations(self):
         """Creates a variable holding all slug locations (from their respective data)."""

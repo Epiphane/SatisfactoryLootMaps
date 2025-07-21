@@ -37,7 +37,7 @@ def run(output_name):
     rocks = LargeRocks()
 
     g.create_graph()
-    g.plot_background("../imgs/Biome_MapU7.png", MAP_CONST)
+    g.plot_background("imgs/Biome_Map1.0.png", MAP_CONST)
 
     # for s in slugs.blue_lst:
     #     g.place_blue_slug(s, DEF_ZOOM, DIST_VAL, DIST_SCALE)

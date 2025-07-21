@@ -15,7 +15,7 @@ class Mercers:
 
     def load_csv(self):
         """Loads csv data to variables."""
-        self.mercer_loc = read_csv("../data/1.0/mercers.csv")
+        self.mercer_loc = read_csv("data/1.0/mercers.csv")
 
     def populate_mercer_locations(self):
         """Creates a variable holding all mercer locations (from their respective data)."""

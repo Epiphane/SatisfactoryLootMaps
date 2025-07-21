@@ -14,7 +14,7 @@ class LargeRocks:
 
     def load_csv(self):
         """Loads csv data to variables."""
-        self.rock_loc = read_csv('../data/U5/destr_rocks.csv')
+        self.rock_loc = read_csv('data/U5/destr_rocks.csv')
 
     def populate_rock_locations(self):
         """Creates a variable holding all rock locations (from their respective data)."""
